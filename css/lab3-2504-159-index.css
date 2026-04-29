@@ -1,0 +1,498 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* 头部区域 */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 61px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.login-btn {
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.login-btn:hover {
+    color: rgb(13, 164, 251);
+}
+
+.login-toggle {
+    display: none;
+}
+
+.login-dialog {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 320px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.login-toggle:checked + .login-dialog {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dialog-content {
+    padding: 20px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.dialog-content h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.form-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s;
+}
+
+.tab-toggle {
+    display: none;
+}
+
+.form-content {
+    position: relative;
+    min-height: 280px;
+}
+
+.login-form,
+.register-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+#login-tab:checked ~ .form-content .login-form,
+#register-tab:checked ~ .form-content .register-form {
+    opacity: 1;
+    visibility: visible;
+}
+
+#login-tab:checked ~ .form-tabs label[for="login-tab"],
+#register-tab:checked ~ .form-tabs label[for="register-tab"] {
+    color: rgb(13, 164, 251);
+    border-bottom: 2px solid rgb(13, 164, 251);
+}
+
+#login-tab:checked ~ .form-tabs label[for="register-tab"],
+#register-tab:checked ~ .form-tabs label[for="login-tab"] {
+    color: #666;
+    border-bottom: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: rgb(13, 164, 251);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(13, 164, 251);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: rgb(10, 140, 220);
+}
+
+.nav-menu {
+    background-color: #333;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0 20px;
+}
+
+.nav-menu li {
+    margin-right: 30px;
+}
+
+.nav-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: rgb(13, 164, 251);
+    cursor: pointer;
+}
+
+/* 主体内容区 */
+.main-content {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* 左侧栏 */
+.left-sidebar {
+    width: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.left-sidebar h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+.category-list {
+    list-style: none;
+}
+
+.category-list li {
+    margin-bottom: 10px;
+}
+
+.category-list a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: color 0.3s;
+}
+
+.category-list a:hover {
+    color: rgb(13, 164, 251);
+    cursor: pointer;
+}
+
+/* 中间栏 */
+.center-content {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.center-content h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;
+    border-bottom: 2px solid rgb(13, 164, 251);
+    padding-bottom: 10px;
+}
+
+/* 图书展示区 */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.book-item {
+    text-align: center;
+}
+
+.book-img {
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.book-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.book-img:hover img {
+    transform: scale(1.05);
+}
+
+
+
+.book-item h4 {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.price {
+    color: rgb(13, 164, 251);
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+
+
+/* 热门推荐 */
+.hot-recommendations {
+    margin-bottom: 30px;
+}
+
+.hot-books {
+    display: flex;
+    gap: 20px;
+}
+
+.hot-book-item {
+    flex: 1;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.hot-book-item:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.hot-book-item h4 {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.hot-book-item p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* 新书上市 */
+.new-books-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.new-books-table th,
+.new-books-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.new-books-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    color: #333;
+}
+
+.new-books-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* 右侧栏 */
+.right-sidebar {
+    width: 250px;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+}
+
+.promotion {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.promotion h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+    border-bottom: 2px solid rgb(13, 164, 251);
+    padding-bottom: 10px;
+}
+
+.promotion-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.promotion-item h4 {
+    color: rgb(13, 164, 251);
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.promotion-item p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.expiry {
+    font-size: 11px;
+    color: #999;
+}
+
+.delivery-info {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.delivery-info h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+    border-bottom: 2px solid rgb(13, 164, 251);
+    padding-bottom: 10px;
+}
+
+.delivery-info ul {
+    list-style: none;
+}
+
+.delivery-info li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+    padding-left: 20px;
+    position: relative;
+}
+
+.delivery-info li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: rgb(13, 164, 251);
+    font-weight: bold;
+}
+
+/* 页脚 */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.footer p {
+    font-size: 14px;
+}
