@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字展销平台-春韵</title>
+    <link rel="stylesheet" href="css/lab4-2504-159-index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="img/logo.png" alt="数字展销平台">
+                <h1>数字展销平台</h1>
+            </div>
+            <div class="user-info">
+                <span class="icon search-icon">🔍</span>
+                <span class="icon cart-icon">🛒</span>
+                <label for="login-toggle" class="login-btn">登录</label>
+                <input type="checkbox" id="login-toggle" class="login-toggle">
+                <div class="login-dialog">
+                    <div class="dialog-content">
+                        <label for="login-toggle" class="close-btn">&times;</label>
+                        <h3>用户登录</h3>
+                        <input type="radio" id="login-tab" name="tab" class="tab-toggle" checked>
+                        <input type="radio" id="register-tab" name="tab" class="tab-toggle">
+                        <div class="form-tabs">
+                            <label for="login-tab" class="tab-btn">登录</label>
+                            <label for="register-tab" class="tab-btn">注册</label>
+                        </div>
+                        <div class="form-content">
+                            <div class="login-form">
+                                <div class="form-group">
+                                    <label for="username">用户名</label>
+                                    <input type="text" id="username" placeholder="请输入用户名">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">密码</label>
+                                    <input type="password" id="password" placeholder="请输入密码">
+                                </div>
+                                <button class="submit-btn">登录</button>
+                            </div>
+                            <div class="register-form">
+                                <div class="form-group">
+                                    <label for="reg-username">用户名</label>
+                                    <input type="text" id="reg-username" placeholder="请输入用户名">
+                                </div>
+                                <div class="form-group">
+                                    <label for="reg-password">密码</label>
+                                    <input type="password" id="reg-password" placeholder="请输入新密码">
+                                </div>
+                                <div class="form-group">
+                                    <label for="reg-confirm">确认密码</label>
+                                    <input type="password" id="reg-confirm" placeholder="请确认新密码">
+                                </div>
+                                <button class="submit-btn">注册</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">图书分类</a></li>
+                <li><a href="#">热门推荐</a></li>
+                <li><a href="#">新书上市</a></li>
+                <li><a href="#">促销活动</a></li>
+                <li><a href="#">我的账户</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- 左侧栏 -->
+        <aside class="left-sidebar">
+            <h3>图书分类导航</h3>
+            <ul class="category-list">
+                <li><a href="#">文学小说</a></li>
+                <li><a href="#">古典名著</a></li>
+                <li><a href="#">历史传记</a></li>
+                <li><a href="#">社会科学</a></li>
+                <li><a href="#">生活艺术</a></li>
+                <li><a href="#">少儿读物</a></li>
+                <li><a href="#">教育考试</a></li>
+                <li><a href="#">外语学习</a></li>
+            </ul>
+        </aside>
+
+        <!-- 中间栏 -->
+        <section class="center-content">
+            <div class="carousel">
+                <h3>轮播展示</h3>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-item">
+                            <img src="img/book.png" alt="轮播图1">
+                            <p>精选图书推荐</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/book1.png" alt="轮播图2">
+                            <p>数据结构入门</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/book2.png" alt="轮播图3">
+                            <p>JavaScript进阶</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/book3.png" alt="轮播图4">
+                            <p>HTML5实战</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-display">
+                <h3>精选图书</h3>
+                <div class="book-grid">
+                    <div class="book-item">
+                        <div class="book-img">
+                            <img src="img/book.png" alt="阅读">
+                        </div>
+                        <h4>数字图书展销平台</h4>
+                        <p class="price">春韵</p>
+                    </div>
+                    <div class="book-item">
+                        <div class="book-img">
+                            <img src="img/book1.png" alt="数据结构">
+                        </div>
+                        <h4>数据结构</h4>
+                        <p class="price">¥89.00</p>
+
+                    </div>
+                    <div class="book-item">
+                        <div class="book-img">
+                            <img src="img/book2.png" alt="JavaScript">
+                        </div>
+                        <h4>JavaScript</h4>
+                        <p class="price">¥75.00</p>
+
+                    </div>
+                    <div class="book-item">
+                        <div class="book-img">
+                            <img src="img/book3.png" alt="HTML5">
+                        </div>
+                        <h4>HTML5</h4>
+                        <p class="price">¥92.00</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="hot-recommendations">
+                <h3>热门推荐</h3>
+                <div class="hot-books">
+                    <div class="hot-book-item">
+                        <h4>《三体》</h4>
+                        <p>刘慈欣 著</p>
+                    </div>
+                    <div class="hot-book-item">
+                        <h4>《活着》</h4>
+                        <p>余华 著</p>
+                    </div>
+                    <div class="hot-book-item">
+                        <h4>《百年孤独》</h4>
+                        <p>马尔克斯 著</p>
+                    </div>
+                    <div class="hot-book-item">
+                        <h4>《人类简史》</h4>
+                        <p>尤瓦尔·赫拉利 著</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-books">
+                <h3>新书上市</h3>
+                <table class="new-books-table">
+                    <thead>
+                        <tr>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>价格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>红楼梦（精装版）</td>
+                            <td>曹雪芹</td>
+                            <td>¥78.00</td>
+                        </tr>
+                        <tr>
+                            <td>西游记（全本）</td>
+                            <td>吴承恩</td>
+                            <td>¥65.00</td>
+                        </tr>
+                        <tr>
+                            <td>水浒传（插图版）</td>
+                            <td>施耐庵</td>
+                            <td>¥82.00</td>
+                        </tr>
+                        <tr>
+                            <td>三国演义（注释版）</td>
+                            <td>罗贯中</td>
+                            <td>¥76.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 右侧栏 -->
+        <aside class="right-sidebar">
+            <div class="promotion">
+                <h3>促销信息</h3>
+                <div class="promotion-item">
+                    <h4>满100减20</h4>
+                    <p>全场通用，不限品类</p>
+                    <p class="expiry">有效期至2026.12.31</p>
+                </div>
+                <div class="promotion-item">
+                    <h4>会员享8折</h4>
+                    <p>新用户注册即享会员权益</p>
+                    <p class="expiry">长期活动</p>
+                </div>
+                <div class="promotion-item">
+                    <h4>买二赠一</h4>
+                    <p>指定图书参与活动</p>
+                    <p class="expiry">详情请见活动页面</p>
+                </div>
+            </div>
+            <div class="delivery-info">
+                <h3>配送服务</h3>
+                <ul>
+                    <li>全场满59元包邮</li>
+                    <li>24小时内发货</li>
+                    <li>7天无理由退货</li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>数字图书展销平台</p>
+    </footer>
+</body>
+</html>
